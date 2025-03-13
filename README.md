@@ -1,35 +1,22 @@
-# বিদ্যুৎ বিল ক্যালকুলেটর
+# Electricity Bill Calculator
 
-এই টুলটি ব্যবহার করে আপনি আপনার বিদ্যুৎ বিল দৈনিক, মাসিক, এবং বার্ষিক হিসাব করতে পারবেন।
+A modern and unique electricity bill calculator with a dark theme. Calculate daily, monthly, and yearly electricity bills for laptops and desktops.
 
-## ফিচার
+## Features
 
-- ওয়াট, ঘণ্টা, এবং বিদ্যুৎ রেট ইনপুট দিয়ে বিল হিসাব করুন।
-- দৈনিক, মাসিক, এবং বার্ষিক বিল দেখুন।
-- সম্পূর্ণ রেসপন্সিভ ডিজাইন।
+- Select device type: Laptop or Desktop.
+- Input device wattage, usage hours, and electricity rate.
+- For desktops, input monitor wattage separately.
+- Fully responsive and modern design.
+- Dark theme for better readability.
 
-## নতুন ফিচার
+## How to Use
 
-- ল্যাপটপ বা ডেক্সটপ সিলেক্ট করার অপশন যোগ করা হয়েছে।
-- যদি ডেক্সটপ সিলেক্ট করা হয়, তাহলে মনিটরের ওয়াট কনজাম্পশন ইনপুট নেওয়া হবে।
-- ডেক্সটপের ক্ষেত্রে মোট বিদ্যুৎ বিল হিসাব করা হবে (CPU + মনিটর)।
+1. Clone the repository.
+2. Open `index.html` in your browser.
+3. Select device type and input values.
+4. Click "Calculate Bill" to see results.
 
-## টেকনোলজি
+## License
 
-- HTML
-- CSS
-- Tailwind CSS
-- JavaScript
-- TypeScript
-
-## কিভাবে ব্যবহার করবেন
-
-1. রিপোজিটরি ক্লোন করুন।
-2. `index.html` ফাইলটি ব্রাউজারে ওপেন করুন।
-3. ওয়াট, ঘণ্টা, এবং বিদ্যুৎ রেট ইনপুট দিন।
-4. "Calculate" বোতাম ক্লিক করুন।
-5. দৈনিক, মাসিক, এবং বার্ষিক বিল দেখুন।
-
-## লাইসেন্স
-
-এই প্রোজেক্টটি MIT লাইসেন্সের অধীনে উন্মুক্ত।
+This project is open-source and available under the MIT License.

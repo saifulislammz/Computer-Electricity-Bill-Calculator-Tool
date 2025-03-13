@@ -1,1 +1,10 @@
 /* Custom styles can be added here */
+/* Custom styles for additional tweaks */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.calculator {
+    backdrop-filter: blur(10px);
+    background-color: rgba(31, 41, 55, 0.9);
+}

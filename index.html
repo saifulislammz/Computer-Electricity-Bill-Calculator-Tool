@@ -7,46 +7,46 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
-    <div class="calculator bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-        <h1 class="text-2xl font-bold text-center mb-4">বিদ্যুৎ বিল ক্যালকুলেটর</h1>
-        <form id="billForm" class="space-y-4">
-            <!-- ডিভাইস সিলেক্ট করুন -->
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-4">
+    <div class="calculator bg-gray-800 p-8 rounded-xl shadow-2xl w-full max-w-md">
+        <h1 class="text-3xl font-bold text-center mb-6 text-indigo-400">Electricity Bill Calculator</h1>
+        <form id="billForm" class="space-y-6">
+            <!-- Device Type Selection -->
             <div>
-                <label for="deviceType" class="block text-sm font-medium text-gray-700">ডিভাইস সিলেক্ট করুন</label>
-                <select id="deviceType" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
-                    <option value="laptop">ল্যাপটপ</option>
-                    <option value="desktop">ডেক্সটপ</option>
+                <label for="deviceType" class="block text-sm font-medium text-gray-300">Select Device Type</label>
+                <select id="deviceType" class="mt-2 block w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required>
+                    <option value="laptop">Laptop</option>
+                    <option value="desktop">Desktop</option>
                 </select>
             </div>
-            <!-- ওয়াট ইনপুট -->
+            <!-- Watt Input -->
             <div>
-                <label for="watt" class="block text-sm font-medium text-gray-700">ওয়াট (W)</label>
-                <input type="number" id="watt" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="যেমন: 200W" required>
+                <label for="watt" class="block text-sm font-medium text-gray-300">Device Wattage (W)</label>
+                <input type="number" id="watt" class="mt-2 block w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., 200W" required>
             </div>
-            <!-- মনিটরের ওয়াট ইনপুট (শুধু ডেক্সটপের জন্য) -->
+            <!-- Monitor Watt Input (Only for Desktop) -->
             <div id="monitorWattField" class="hidden">
-                <label for="monitorWatt" class="block text-sm font-medium text-gray-700">মনিটরের ওয়াট (W)</label>
-                <input type="number" id="monitorWatt" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="যেমন: 50W">
+                <label for="monitorWatt" class="block text-sm font-medium text-gray-300">Monitor Wattage (W)</label>
+                <input type="number" id="monitorWatt" class="mt-2 block w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., 50W">
             </div>
-            <!-- ঘণ্টা ইনপুট -->
+            <!-- Hours Input -->
             <div>
-                <label for="hours" class="block text-sm font-medium text-gray-700">ঘণ্টা ব্যবহার</label>
-                <input type="number" id="hours" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="যেমন: 5 ঘণ্টা" required>
+                <label for="hours" class="block text-sm font-medium text-gray-300">Usage Hours</label>
+                <input type="number" id="hours" class="mt-2 block w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., 5 hours" required>
             </div>
-            <!-- বিদ্যুৎ রেট ইনপুট -->
+            <!-- Electricity Rate Input -->
             <div>
-                <label for="rate" class="block text-sm font-medium text-gray-700">বিদ্যুৎ রেট (প্রতি ইউনিট মূল্য)</label>
-                <input type="number" id="rate" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="যেমন: 6 টাকা" required>
+                <label for="rate" class="block text-sm font-medium text-gray-300">Electricity Rate (per unit)</label>
+                <input type="number" id="rate" class="mt-2 block w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg shadow-sm text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., 6 Taka" required>
             </div>
-            <!-- Calculate বোতাম -->
-            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Calculate</button>
+            <!-- Calculate Button -->
+            <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800">Calculate Bill</button>
         </form>
-        <!-- রেজাল্ট ডিসপ্লে -->
-        <div id="result" class="mt-6 space-y-2">
-            <div class="text-center text-lg font-semibold">দৈনিক বিল: <span id="dailyBill" class="text-indigo-600">0</span> টাকা</div>
-            <div class="text-center text-lg font-semibold">মাসিক বিল: <span id="monthlyBill" class="text-indigo-600">0</span> টাকা</div>
-            <div class="text-center text-lg font-semibold">বার্ষিক বিল: <span id="yearlyBill" class="text-indigo-600">0</span> টাকা</div>
+        <!-- Result Display -->
+        <div id="result" class="mt-8 space-y-4">
+            <div class="text-center text-lg font-semibold">Daily Bill: <span id="dailyBill" class="text-indigo-400">0</span> Taka</div>
+            <div class="text-center text-lg font-semibold">Monthly Bill: <span id="monthlyBill" class="text-indigo-400">0</span> Taka</div>
+            <div class="text-center text-lg font-semibold">Yearly Bill: <span id="yearlyBill" class="text-indigo-400">0</span> Taka</div>
         </div>
     </div>
     <script src="script.js"></script>
