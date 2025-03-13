@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="calculator bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-4">বিদ্যুৎ বিল ক্যালকুলেটর</h1>
+        <form id="billForm" class="space-y-4">
+            <!-- ওয়াট ইনপুট -->
+            <div>
+                <label for="watt" class="block text-sm font-medium text-gray-700">ওয়াট (W)</label>
+                <input type="number" id="watt" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="যেমন: 200W" required>
+            </div>
+            <!-- ঘণ্টা ইনপুট -->
+            <div>
+                <label for="hours" class="block text-sm font-medium text-gray-700">ঘণ্টা ব্যবহার</label>
+                <input type="number" id="hours" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="যেমন: 5 ঘণ্টা" required>
+            </div>
+            <!-- বিদ্যুৎ রেট ইনপুট -->
+            <div>
+                <label for="rate" class="block text-sm font-medium text-gray-700">বিদ্যুৎ রেট (প্রতি ইউনিট মূল্য)</label>
+                <input type="number" id="rate" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="যেমন: 6 টাকা" required>
+            </div>
+            <!-- Calculate বোতাম -->
+            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Calculate</button>
+        </form>
+        <!-- রেজাল্ট ডিসপ্লে -->
+        <div id="result" class="mt-6 space-y-2">
+            <div class="text-center text-lg font-semibold">দৈনিক বিল: <span id="dailyBill" class="text-indigo-600">0</span> টাকা</div>
+            <div class="text-center text-lg font-semibold">মাসিক বিল: <span id="monthlyBill" class="text-indigo-600">0</span> টাকা</div>
+            <div class="text-center text-lg font-semibold">বার্ষিক বিল: <span id="yearlyBill" class="text-indigo-600">0</span> টাকা</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
