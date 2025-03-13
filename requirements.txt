@@ -1,0 +1,9 @@
+# Node.js এবং npm ইন্সটল করতে হবে
+nodejs
+npm
+
+# Tailwind CSS ইন্সটল করতে হবে
+tailwindcss
+
+# TypeScript কম্পাইলার ইন্সটল করতে হবে
+typescript
