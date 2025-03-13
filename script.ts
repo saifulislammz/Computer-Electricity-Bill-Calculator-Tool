@@ -29,7 +29,7 @@ document.getElementById('billForm')?.addEventListener('submit', function(event: 
     const yearlyBill: number = dailyBill * 365;
 
     // Display results
-    document.getElementById('dailyBill')!.innerText = dailyBill.toFixed(2);
-    document.getElementById('monthlyBill')!.innerText = monthlyBill.toFixed(2);
-    document.getElementById('yearlyBill')!.innerText = yearlyBill.toFixed(2);
+    document.getElementById('dailyBill')!.innerText = `${dailyBill.toFixed(2)} Taka`;
+    document.getElementById('monthlyBill')!.innerText = `${monthlyBill.toFixed(2)} Taka`;
+    document.getElementById('yearlyBill')!.innerText = `${yearlyBill.toFixed(2)} Taka`;
 });
